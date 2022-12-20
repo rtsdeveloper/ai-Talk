@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="icon/icon.svg" width="35px">
+                <h1>ai Talk</h1>
+            </div>
+            <button type="button" class="btn"">
+                <img src=" icon/menu.svg" width="40px">
+            </button>
+        </header>
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4>1</h4>
+                </div>
+                <div class="users-list">
+                    <p><a href="#" style="color: #ffff; text-decoration: none;">Jarvis</a></p>
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                    <div class="users-join">
+                        <p><b>Jarvis Join the Chat</b></p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Jarvis</h5>
+                        <p>Hello Ultron</p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>Jarvis</h5>
+                        <p>Hello Ultron</p>
+                    </div>
+                </div>
+                <div class="users-input">
+                    <input type="text" placeholder="Type Your Message">
+                    <button class="send">SEND</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        "use strictly"
+        var uwindow = document.querySelector('.users-window');
+
+        document.querySelector(".btn").addEventListener("click", function () {
+            if (uwindow.style.display == "none") {
+                uwindow.style.display = "block";
+            }
+            else {
+                uwindow.style.display = "none";
+            }
+        });
+
+        document.querySelector('.send').addEventListener("click", function () {
+            let input = document.querySelector("input").value;
+            document.querySelector('.outgoing').innerHTML = input;
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
